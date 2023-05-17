@@ -30,3 +30,4 @@ const compraBlockSchema = new Schema({
 });
 
 module.exports = mongoose.model("GastosBlock", compraBlockSchema);
+//ADD Centavos
