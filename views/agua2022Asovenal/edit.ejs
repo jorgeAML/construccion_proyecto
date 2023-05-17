@@ -1,0 +1,41 @@
+<div><%- include('../partials/head') %>
+    <h3>Actualizar datos de Comite de vecinos Asovenal</h3>
+    <form method="POST" action="<%=`/agua2022asovenal/${agua2022asovenals._id}/update?_method=PUT`%>">
+        <label for="inputRecibo">Recibo</label>
+        <input type="number" name="recibo" placeholder="No. Recibo" value="<%= agua2022asovenals.recibo %>" id="inputRecibo">
+
+        <label for="inputDate">Fecha de pago</label>
+        <input type="date" name="fecha" placeholder="Fecha" value="<%= agua2022asovenals.fecha %>" id="inputDate">
+        
+        <label for="inputMonth">Mes de pago</label>
+        <input type="month" name="mes" placeholder="Mes" value="<%= agua2022asovenals.mes %>" id="inputMonth">
+
+        <label for="inputYear">Año de pago</label>
+        <input type="text" name="year" placeholder="Año" value="<%= agua2022asovenals.year %>" id="inputYear">
+
+        <label for="inputCuenta">Cuenta</label>
+        <input type="number" name="cuenta" placeholder="No. de cuenta" value="<%= agua2022asovenals.cuenta %>" id="inputCuenta">
+
+        <label for="inputDireccion">Direccion</label>
+        <input type="text" name="direccion" placeholder="Direccion" value="<%= agua2022asovenals.direccion %>" id="inputDireccion">
+
+        <label for="inputActual">Actual</label>
+        <input type="number" name="actual" placeholder="Lectura actual" value="<%= agua2022asovenals.actual %>" id="inputActual">
+
+        <label for="inputAnterior">Anterior</label>
+        <input type="number" name="anterior" placeholder="Lectura anterior" value="<%= agua2022asovenals.anterior %>" id="inputAnterior">
+
+        <label for="inputConsumo">Consumo</label>
+        <input type="number" name="consumo" placeholder="Consumo" value="<%= agua2022asovenals.consumo %>" id="inputConsumo">
+
+        <label for="inputExceso">Exceso</label>
+        <input type="number" name="exceso" placeholder="Exceso" value="<%= agua2022asovenals.exceso %>" id="inputExceso">
+
+        <label for="inputPago">Pago</label>
+        <input type="number" name="pago" placeholder="TOTAL A PAGAR" value="<%= agua2022asovenals.pago %>" id="inputPago">
+
+        <button class="box" type="submit">Update</button>
+        <button class="box"><a href="/verAgua22Asovenal">Regresar</a></button>
+        <p>Para mandar a llamar la variable correcta usa comiteasovenals que fue la que creaste en el controlador</p>
+    </form>
+</div>

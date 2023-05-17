@@ -1,0 +1,32 @@
+<div><%- include('../partials/head') %>
+    <h3>Actualizar datos de Comite de vecinos Asovenal</h3>
+    <form method="POST" action="<%=`/comiteasovenal/${comiteasovenals._id}/update?_method=PUT`%>">
+        <label for="inputDate">Fecha de pago</label>
+        <input type="date" name="fecha" placeholder="Fecha" value="<%= comiteasovenals.fecha %>" id="inputDate">
+        
+        <label for="inputMonth">Mes de pago</label>
+        <input type="month" name="mes" placeholder="Mes" value="<%= comiteasovenals.mes %>" id="inputMonth">
+
+        <label for="inputYear">Año de pago</label>
+        <input type="text" name="year" placeholder="Año" value="<%= comiteasovenals.year %>" id="inputYear">
+
+        <label for="inputCantidad">Cantidad</label>
+        <input type="text" name="cantidad" placeholder="Cantidad" value="<%= comiteasovenals.cantidad %>" id="inputCantidad">
+
+        <label for="inputDireccion">Direccion</label>
+        <input type="text" name="direccion" placeholder="Direccion" value="<%= comiteasovenals.direccion %>" id="inputDireccion">
+
+        <label for="inputRecibo">Recibo</label>
+        <input type="number" name="recibo" placeholder="No. Recibo" value="<%= comiteasovenals.recibo %>" id="inputRecibo">
+
+        <label for="inputFamilia">Familia</label>
+        <input type="text" name="familia" placeholder="Recibimos de" value="<%= comiteasovenals.familia %>" id="inputFamilia">
+
+        
+
+        
+        <button class="box" type="submit">Update</button>
+        <button class="box"><a href="/verPagosAsovenal">Regresar</a></button>
+        <p>Para mandar a llamar la variable correcta usa comiteasovenals que fue la que creaste en el controlador</p>
+    </form>
+</div>

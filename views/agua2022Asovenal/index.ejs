@@ -1,0 +1,34 @@
+<title><%- title %></title>
+<%- include('../partials/head') %>
+<div>
+    <a href="/"><button class="box">Regresar al inicio</button></a>
+    <a href="/saveAgua22Asovenal"><button class="box">Ingresar Pago</button></a>
+    <form role="search">
+        <input type="search" name="q" placeholder="Buscar recibo" required="" value="">
+        <input type="submit" value="Buscar!">
+    </form>
+</div>
+<h2 class="center-recibos">Asovenal pagos 2022</h2>
+<div id="recibo-asovenal-agua" class="recibo-asovenal row" >
+    
+    <% agua2022asovenals.forEach(pagos => { %>
+    <div class="row">
+        <div class="col">
+            <span class="recibo-bar-agua"><%= pagos.recibo %></span>
+            <!--<p class="recibo">No.00<%= pagos.recibo %></p>-->
+            <p><span class="mes-agua"><%= pagos.mes %></span>/<span class="year-agua"><%= pagos.year %></span></p>
+            <p>No.Cuenta <%= pagos.cuenta %></p>
+            <p><%= pagos.direccion %></p>
+            <p><span class="">L.ACT. <%= pagos.actual %> m&sup3;</span>/<span>L.ANT.<%= pagos.anterior %> m&sup3;</span></p>
+            <p><span>Consumo <span class="mes-agua"><%= pagos.consumo %></span> m&sup3;</span>/<span>Exceso <%= pagos.exceso %> m&sup3;</span></p>
+            <p class="cantidad-agua">Q.<%= pagos.pago %>.00</p>
+            <a href="<%=`/agua2022asovenal/${pagos._id}/edit`  %>"><button class="box-recibo-agua">editar</button></a>
+            <a href="<%=`/agua2022asovenal/${pagos._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')"><button class="box-recibo-agua">Eliminar</button></a>
+        </div>
+    </div>
+    <!--Va el nombre de la carpeta pero en minusculas-->
+    <% }); %>
+</div>
+<div>
+
+</div>

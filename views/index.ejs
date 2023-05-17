@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Base de datos construccion</title>
+        <%- include('./partials/head') %>
+    </head>
+    <body ng-controller="myController">
+        <div class="my-style">
+            <h2>Gastos construcción 2022</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="card-title">Gastos Generales</h3>
+                    <hr class="card-hr">
+                    <button class="box"><a href="/guardarGastos">Ingresar Gastos</a><br></button>
+                    <button class="box"><a href="/verGastos">Ver Gastos</a></button>
+                </div>
+                <div class="col">
+                    <h3 class="card-title">Pagos Garita Asovenal</h3>
+                    <hr class="card-hr">
+                    <button class="box"><a href="/savePagosAsovenal">Ingresar Pagos</a><br></button>
+                    <button class="box"><a href="/verPagosAsovenal">Ver Pagos</a></button>
+                </div>
+                <div class="col">
+                    <h3 class="card-title">Pagos Agua Asovenal</h3>
+                    <hr class="card-hr">
+                    <button class="box"><a href="/saveAgua22Asovenal">Ingresar Pagos</a><br></button>
+                    <button class="box"><a href="/verAgua22Asovenal">Ver Pagos</a></button>
+                </div>
+                <div class="col">
+                    <h3 class="card-title">Pagos de Block</h3>
+                    <hr class="card-hr">
+                    <button class="box"><a href="/saveGastosBlock">Ingresar Pagos</a><br></button>
+                    <button class="box"><a href="/verComprasBLocks">Ver Pagos</a></button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <ol>
+            <li>agregar busquedas dentro de la pagina</li>
+            <li><del>Agregar la opcion de borrar</del></li>
+            <li>Agregar pagos de Joel</li>
+            <li>Agregar planos actualizados</li>
+        </ol>
+        
+        <script src="./main.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%- title %></title>
+        <%- include('../partials/head') %>
+    </head>     
+    <body>
+        <h3>Gastos Generales 2022</h3>
+        <h4>Base de datos de construcción lote 179</h4>
+        <button class="box"><a href="/guardarGastos">Introducir más datos</a></button>
+        <button class="box"><a href="/">Regresar al inicio</a></button>
+        <table>
+           <thead>
+               <tr>
+                   <th>Cantidad</th>
+                   <th>Descripcion</th>
+                   <th>Precio Unitario</th>
+                   <th>Total</th>
+                   <th>Distribuidor</th>
+                   <th>Direccion</th>
+                   <th>Telefono</th>
+                   <th>Fecha Emision</th>
+                   <th>Fecha</th>
+                   <th>Editar</th>
+                   <th>Eliminar</th>
+               </tr>
+           </thead>
+           <tbody>
+               <% gastosgenerales.forEach(gasto => { %>
+                    <tr>
+                        <td><%= gasto.cantidad %></td>
+                        <td><%= gasto.descripcion %></td>
+                        <td><%= gasto.Precio %></td>
+                        <td><%= gasto.Total %></td>
+                        <td><%= gasto.distribuidor %></td>
+                        <td><%= gasto.direccion %></td>
+                        <td><%= gasto.telefono %></td>
+                        <td><%= gasto.fechaEmision.dia %>/<%= gasto.fechaEmision.mes %>/<%= gasto.fechaEmision.year %></td>
+                        <td><%= gasto.fecha %></td>
+                        <td><a href="<%=`/gastosgenerales/${gasto._id}/edit`  %>">Editar</a></td>
+                        <td><a href="<%=`/gastosgenerales/${gasto._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')">Eliminar registro</a></td>
+                    </tr>
+                <% }); %>
+           </tbody>
+        </table>
+        <button class="box"><a href="/guardarGastos">Introducir más datos</a></button>
+        <button class="box"><a href="/">Regresar al inicio</a></button>
+    </body>
+</html>

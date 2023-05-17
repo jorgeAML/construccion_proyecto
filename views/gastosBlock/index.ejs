@@ -1,0 +1,33 @@
+<title><%- title %></title>
+<%- include('../partials/head') %>
+<div>
+    <a href="/"><button class="box">Regresar al inicio</button></a>
+    <a href="/saveGastosBlock"><button class="box">Ingresar Pago</button></a>
+    <form role="search">
+        <input type="search" name="q" placeholder="Buscar recibo" required="" value="">
+        <input type="submit" value="Buscar!">
+    </form>
+</div>
+<h2 class="center-recibos">Compra de Block</h2>
+<div id="recibo-asovenal-agua" class="recibo-asovenal row" >
+    
+    <% gastosblocks.forEach(pagos => { %>
+    <div class="row">
+        <div class="col">
+            <span class="recibo-bar-agua"><%= pagos.pedido %></span>
+            <!--<p class="recibo">No.00<%= pagos.recibo %></p>-->
+            <p><span class="mes-agua"><%= pagos.fecha %></span>/<span class="year-agua"></span></p>
+            <p>Cantidad <%= pagos.cantidad %></p>
+            <p><%= pagos.descripcion %></p>
+            <p class="cantidad-agua">Q.<%= pagos.precio %>.00</p>
+            <p class="cantidad-agua">Q.<%= pagos.total %>.00</p>
+            <a href="<%=`/gastosblock/${pagos._id}/edit`  %>"><button class="box-recibo-agua">editar</button></a>
+            <a href="<%=`/gastosblock/${pagos._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')"><button class="box-recibo-agua">Eliminar</button></a>
+        </div>
+    </div>
+    <!--Va el nombre de la carpeta pero en minusculas-->
+    <% }); %>
+</div>
+<div>
+
+</div>

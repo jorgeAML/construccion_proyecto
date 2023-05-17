@@ -1,0 +1,47 @@
+@media (min-width: 1200px) {
+    :root {
+        --font-barcode: 'Libre Barcode 39 Extended Text', cursive;
+        --border-recibos:  	#a68563;
+    }
+    .center-recibos {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    .recibo {
+        color: #c6093b;
+    }
+    .recibo-bar {
+        color: #c6093b;
+        font-family: var(--font-barcode);
+        font-size: 2.4rem;
+    }
+    #recibo-asovenal > .row {
+        border: 5px solid var(--border-color);
+        margin: 5px;
+        border-radius: 1em;
+        box-shadow: 1px 4px var(--border-recibos);
+    }
+    .box-recibo {
+        background-color: #ff851b;
+        border: none;
+        padding: 5px;
+        font-family: var(--font-family1);
+        cursor: pointer;
+        color: aliceblue;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    .cantidad, .year {
+        color: #c6093b;
+        font-weight: bold;
+    }
+    .mes {
+        background-color: #ff851b;
+        padding: 2px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+}

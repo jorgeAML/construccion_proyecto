@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<div>
+    <h3>Ingresar Pago</h3>
+    <form action="/agua2022Asovenal/guardarPago" method="POST">
+        <input type="number" name="recibo" placeholder="No. Recibo">
+        <input type="month" name="mes" placeholder="Mes">
+        <input type="text" name="year" placeholder="Año">
+        <input type="date" name="fecha" placeholder="Fecha">
+        <input type="number" name="cuenta" placeholder="No. de cuenta">
+        <input type="text" name="direccion" placeholder="Direccion">
+        <input type="number" name="actual" placeholder="Lectura actual">
+        <input type="number" name="anterior" placeholder="Lectura anterior">
+        <input type="number" name="consumo" placeholder="Consumo">
+        <input type="number" name="exceso" placeholder="Exceso">
+        <input type="number" name="pago" placeholder="TOTAL A PAGAR">
+        <button class="box" type="submit">Ingresar datos</button>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<title><%- title %></title>
+<%- include('../partials/head') %>
+<div>
+    <a href="/"><button class="box">Regresar al inicio</button></a>
+    <a href="/savePagosAsovenal"><button class="box">Ingresar Pago</button></a>
+    <form role="search">
+        <input type="search" name="q" placeholder="Buscar recibo" required="" value="">
+        <input type="submit" value="Buscar!">
+    </form>
+</div>
+<h2 class="center-recibos">Asovenal pagos 2022</h2>
+<div id="recibo-asovenal" class="recibo-asovenal row" >
+    
+    <% comiteasovenals.forEach(pagos => { %>
+    <div class="row">
+        <div class="col">
+            <span class="recibo-bar"><%= pagos.recibo %></span>
+            <!--<p class="recibo">No.00<%= pagos.recibo %></p>-->
+            <p><span class="mes"><%= pagos.mes %></span>/<span class="year"><%= pagos.year %></span></p>
+            <p><%= pagos.direccion %></p>
+            <p><%= pagos.familia %></p>
+            <p class="cantidad">Q.<%= pagos.cantidad %>.00</p>
+            <a href="<%=`/comiteasovenal/${pagos._id}/edit`  %>"><button class="box-recibo">editar</button></a>
+            <a href="<%=`/comiteasovenal/${pagos._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')"><button class="box-recibo">Eliminar</button></a>
+        </div>
+    </div>
+    <!--Va el nombre de la carpeta pero en minusculas-->
+    <% }); %>
+</div>
+<div>
+
+</div>

@@ -1,0 +1,16 @@
+<%- include('../partials/head') %>
+<div>
+    <h3>Ingresar Pago</h3>
+    <form action="/comiteAsovenal/guardarPago" method="POST">
+        <input type="date" name="fecha" placeholder="Fecha">
+        <input type="month" name="mes" placeholder="Mes">
+        <input type="text" name="year" placeholder="Año">
+        
+        <input type="text" name="direccion" placeholder="Direccion">
+        
+        <input type="text" name="cantidad" placeholder="Cantidad">
+        <input type="number" name="recibo" placeholder="No. Recibo">
+        <input type="text" name="familia" placeholder="Familia/recibimos de">        
+        <button class="box" type="submit">Ingresar datos</button>
+    </form>
+</div>

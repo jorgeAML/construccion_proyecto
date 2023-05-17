@@ -1,0 +1,26 @@
+<div><%- include('../partials/head') %>
+    <h3>Actualizar datos de compra de block</h3>
+    <form method="POST" action="<%=`/gastosblock/${gastosblocks._id}/update?_method=PUT`%>">
+        <label for="inputRecibo">Pedido</label>
+        <input type="number" name="pedido" placeholder="No. pedido" value="<%= gastosblocks.pedido %>" id="inputRecibo">
+
+        <label for="inputDate">Fecha de pago</label>
+        <input type="date" name="fecha" placeholder="Fecha" value="<%= gastosblocks.fecha %>" id="inputDate">
+        
+        <label for="inputCantidad">Cantidad</label>
+        <input type="number" name="cantidad" placeholder="cantidad" value="<%= gastosblocks.cantidad %>" id="inputCantidad">
+
+        <label for="inputDescripcion">Descripcion</label>
+        <input type="text" name="descripcion" placeholder="Descripcion" value="<%= gastosblocks.descripcion %>" id="inputDescripcion">
+
+        <label for="inputPrecio">Precio</label>
+        <input type="number" name="precio" placeholder="Precio" value="<%= gastosblocks.precio %>" id="inputPrecio">
+
+        <label for="inputTotal">total</label>
+        <input type="number" name="total" placeholder="TOTAL A PAGAR" value="<%= gastosblocks.total %>" id="inputTotal">
+
+        <button class="box" type="submit">Update</button>
+        <button class="box"><a href="/verComprasBLocks">Regresar</a></button>
+        <p>Para mandar a llamar la variable correcta usa comiteasovenals que fue la que creaste en el controlador</p>
+    </form>
+</div>

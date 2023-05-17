@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%- title %></title>
+        <%- include('../partials/head') %>
+    </head>
+    <body>
+        <h3>Actualizar Gastos</h3>
+        
+    <form method="POST" action="<%=`/gastosgenerales/${gastosgenerales._id}/update?_method=PUT`%>">
+        <label for="inputCantidad">Cantidad</label>
+        <input type="text" name="cantidad" placeholder="Cantidad" value="<%= gastosgenerales.cantidad %>" id="inputCantidad">
+
+        <label for="inputDescripcion">Descripcion del producto</label>
+        <input type="text" name="descripcion" placeholder="Descripcion" value="<%= gastosgenerales.descripcion %>" id="inputDescripcion">
+
+        <label for="inputPrecionUnitario">Precion Unitario del producto</label>
+        <input type="number" name="precioUnitario" placeholder="Precion Unitario" value="<%= gastosgenerales.precioUnitario %>" id="inputPrecionUnitario">
+
+        <label for="inputCentavos">Centavos del producto</label>
+        <input type="number" name="centavos" placeholder="Unidades en centavos" value="<%= gastosgenerales.centavos %>" id="inputCentavos">
+
+        <label for="inputTotal">Total del producto sin centavos</label>
+        <input type="number" name="total" placeholder="Total" value="<%= gastosgenerales.total %>" id="inputTotal">
+
+        <label for="inputDate">Fecha de compra del producto</label>
+        <input type="date" name="fecha" placeholder="Fecha" value="<%= gastosgenerales.fecha %>" id="inputDate">
+
+        <label for="inputDistribuidor">Nombre del distribuidor</label>
+        <input type="text" name="distribuidor" placeholder="Distribuidor" value="<%= gastosgenerales.distribuidor %>" id="inputDistribuidor">
+
+        <label for="inputDireccion">Direccion del proveedor</label>
+        <input type="text" name="direccion" placeholder="Direccion" value="<%= gastosgenerales.direccion %>" id="inputDireccion">
+
+        <label for="inputTelefono">Telefono del distribuidor</label>
+        <input type="number" name="telefono" placeholder="Telefono" value="<%= gastosgenerales.telefono %>" id="inputTelefono">
+
+        <label for="inputDia">Día de la compra</label>
+        <input type="number" name="dia" placeholder="Dia" value="<%= gastosgenerales.fechaEmision.dia %>" id="inputDia">
+
+        <label for="inputMes">Mes de la compra</label>
+        <input type="text" name="mes" placeholder="Mes" value="<%= gastosgenerales.fechaEmision.mes %>" id="inputMes">
+
+        <label for="inputYear">Año de la compra</label>
+        <input type="number" name="year" placeholder="Año" value="<%= gastosgenerales.fechaEmision.year %>" id="inputYear">
+        <button class="box" type="submit">Update</button>
+        <button class="box"><a href="/verGastos">Regresar</a></button>
+        <p>Para mandar a llamar la variable correcta usa gastosgenerales que fue la que creaste en el controlador</p>
+    </form>
+    
+    </body>
+</html>

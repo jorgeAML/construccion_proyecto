@@ -1,0 +1,90 @@
+body {
+    font-size: 16px;
+    background-color: var(--backgound-color);
+    color: var(--font-color);
+    font-family: var(--font-family1);
+}
+.my-style {
+    background-color:  	var(--back-border);
+    border: 1em solid var(--border-color);
+    text-align: center;
+    font-size: 1em;
+}
+.container {
+    margin: 2em;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+}
+.col {
+    flex: 1 1 auto;
+    margin: 1em;
+}
+.card-title {
+    border: 8px solid var(--border-color);
+    background-color: var(--back-border);
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.card-hr {
+    border: 2px dashed var(--border-color);
+}
+
+table {
+    text-align: center;
+    border: 9px solid var(--border-color);
+}
+th, td{
+    border: 3px solid var(--hide-color);
+}
+th {
+    text-transform: uppercase;
+    padding: 1em;
+}
+a {
+    color: var(--font-color);
+    /*text-decoration: solid underline var(--overline-color) 4px;*/
+    text-decoration: none;
+    font-family: var(--font-family1);
+}
+.box {
+    padding: 1em;
+    border: 5px solid var(--border-color);
+    font-size: 1em;
+    background-color: var(--back-button);
+    margin: 2em; 
+    box-shadow: 6px 6px var(--hide-color);
+    cursor: pointer;
+}
+.box:hover, form > input:hover {
+    background-color: var(--hover-color);   
+}
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+form > label, input, .buttonEdit {
+    flex: 1 1 20%;
+    padding: 1%;
+}
+
+form > input {
+    background-color: var(----back-button);
+    border: 5px solid var(--border-color);
+    margin: 3px;
+    color: var(--font-color);
+    font-family: var(--font-family1);
+    font-size: 1.4em;
+}
+form > input::placeholder {
+    color: var(--overline-color);
+}

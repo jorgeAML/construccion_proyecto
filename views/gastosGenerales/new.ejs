@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%- title %></title>
+        <%- include('../partials/head') %>
+    </head>
+    <body>
+        <h3>Ingresar gastos</h3>
+        <button class="box"><a href="/">Regresar al inicio</a></button>
+    <form action="/gastosGenerales/create" method="POST">
+        <input type="text" name="cantidad" placeholder="Cantidad">
+        <input type="text" name="descripcion" placeholder="Descripcion">
+        <input type="number" name="precioUnitario" placeholder="Precion Unitario">
+        <input type="number" name="centavos" placeholder="Unidades en centavos">
+        <input type="number" name="total" placeholder="Total">
+        <input type="date" name="fecha" placeholder="Fecha">
+        <input type="text" name="distribuidor" placeholder="Distribuidor">
+        <input type="text" name="direccion" placeholder="Direccion">
+        <input type="number" name="telefono" placeholder="Telefono">
+        <input type="number" name="dia" placeholder="Dia">
+        <input type="text" name="mes" placeholder="Mes">
+        <input type="number" name="year" placeholder="Año">
+        <button class="box" type="submit">Ingresar datos</button>
+    </form>
+    </body>
+</html>

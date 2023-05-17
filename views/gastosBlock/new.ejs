@@ -1,0 +1,13 @@
+<%- include('../partials/head') %>
+<div>
+    <h3>Ingresar Pago de blocks</h3>
+    <form action="/gastosBlock/guardarPago" method="POST">
+        <input type="number" name="pedido" placeholder="No. Pedido">
+        <input type="date" name="fecha" placeholder="Fecha">
+        <input type="number" name="cantidad" placeholder="Cantidad">
+        <input type="text" name="descripcion" placeholder="Descripcion">
+        <input type="number" name="precio" placeholder="Precio">
+        <input type="number" name="total" placeholder="TOTAL A PAGAR">
+        <button class="box" type="submit">Ingresar datos</button>
+    </form>
+</div>

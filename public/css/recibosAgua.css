@@ -1,0 +1,41 @@
+@media (min-width: 1200px) {
+    :root {
+        --back-color:  	#1dc7eb;
+        --fon-color: #ccc8c4;
+        --back2-color: #134788;
+    }
+    .recibo-bar-agua {
+        color: var(--back2-color);
+        font-family: var(--font-barcode);
+        font-size: 2.4rem;
+    }
+    .mes-agua {
+        background-color: var(--back2-color);
+        padding: 4px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: var(--back-color);
+    }
+    .cantidad-agua, .year-agua {
+        color: var(--back2-color);
+        font-weight: bold;
+    }
+    .box-recibo-agua {
+        background-color: var(--back2-color);
+        border: none;
+        padding: 5px;
+        font-family: var(--font-family1);
+        cursor: pointer;
+        color: var(--back-color);
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    #recibo-asovenal-agua > .row {
+        border: 5px solid var(--border-color);
+        margin: 5px;
+        border-radius: 1em;
+        box-shadow: 1px 4px var(--fon-color);
+    }
+}
