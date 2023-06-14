@@ -1,11 +1,13 @@
 const gastosBlock = require('../models/gastosBlock');
 const GastosBlock = require('../models/gastosBlock');
 
+
 module.exports = {
     index: (req, res, next) => {
        GastosBlock.find({}).sort({fecha: -1})
        .then(gastosblocks => {
         res.locals.gastosblocks = gastosblocks;
+        
         next();
        })
        .catch(error => {

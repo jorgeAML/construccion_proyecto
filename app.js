@@ -19,6 +19,7 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+
 const homeController = require('./controllers/homeController');
 const gastosController = require('./controllers/gastosGeneralesController');
 const pagosComiteAsovenal = require('./controllers/comitePagosController');
@@ -42,6 +43,7 @@ app.set('view engine', 'ejs');
 app.use(layouts);
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 

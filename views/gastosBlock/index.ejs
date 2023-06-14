@@ -12,11 +12,12 @@
 <div id="recibo-asovenal-agua" class="recibo-asovenal row" >
     
     <% gastosblocks.forEach(pagos => { %>
+
     <div class="row">
         <div class="col">
             <span class="recibo-bar-agua"><%= pagos.pedido %></span>
             <!--<p class="recibo">No.00<%= pagos.recibo %></p>-->
-            <p><span class="mes-agua"><%= pagos.fecha %></span>/<span class="year-agua"></span></p>
+            <p><span class="mes-agua"><%= pagos.fecha.toDateString() %></span>
             <p>Cantidad <%= pagos.cantidad %></p>
             <p><%= pagos.descripcion %></p>
             <p class="cantidad-agua">Q.<%= pagos.precio %>.00</p>
@@ -26,7 +27,7 @@
         </div>
     </div>
     <!--Va el nombre de la carpeta pero en minusculas-->
-    <% }); %>
+    <%  }); %>
 </div>
 <div>
 
