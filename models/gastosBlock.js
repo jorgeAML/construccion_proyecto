@@ -47,7 +47,7 @@ const compraBlockSchema = new Schema({
 
 compraBlockSchema.virtual("Precio").get(function(){
     if(this.centavos < 10) {
-        return `Q${this.precio}.0 ${this.centavos}`;
+        return `Q${this.precio}.0${this.centavos}`;
     } else {
         return `Q${this.precio}.${this.centavos}`;
     }

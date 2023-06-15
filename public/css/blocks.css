@@ -1,0 +1,46 @@
+:root {
+    --back-color4: #c96621;
+    --back-color2: #b2053a;
+    --back-color3: #c1b8ab;
+    --shadow-color: 	#0b0e12;
+    --monolit-color: #f1c232;
+}
+#recibo-asovenal-agua > .row {
+    border: 5px solid var(--border-color);
+    margin: 5px;
+    border-radius: 1em;
+    box-shadow: 1px 4px var(--shadow-color);
+}
+.monolit {
+    border-bottom: 2px dashed var(--back-color2);
+    color: var(--shadow-color);
+    text-transform: uppercase;
+}
+.box-recibo-block {
+    background-color: var(--back-color3);
+    border: none;
+    padding: 5px;
+    font-family: var(--font-family1);
+    cursor: pointer;
+    color: var(--shadow-color);
+    font-weight: bold;
+    border-radius: 5px;
+}
+.block {
+    background-color: var(--back-color3);
+    padding: 4px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: var(--back-color2);
+}
+.recibo-bar-block {
+    color: var(--shadow-color);
+    font-family: var(--font-barcode);
+    font-size: 2.4rem;
+}
+.cantidad-block, .year-block {
+    color: var(--shadow-color);
+    font-weight: bold;
+}
