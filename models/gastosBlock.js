@@ -26,8 +26,32 @@ const compraBlockSchema = new Schema({
     fecha: {
         type: Date,
         required: true
+    },
+    empresa: {
+        type: String,
+        required: false
+    },
+    direccion: {
+        type: String,
+        required: false
+    },
+    telefono: {
+        type: Number,
+        required: false
+    },
+    centavos: {
+        type: Number,
+        required: true
     }
 });
+
+compraBlockSchema.virtual("Precio").get(function(){
+    if(this.centavos < 10) {
+        return `Q${this.precio}.0 ${this.centavos}`;
+    } else {
+        return `Q${this.precio}.${this.centavos}`;
+    }
+})
 
 module.exports = mongoose.model("GastosBlock", compraBlockSchema);
 //ADD Centavos

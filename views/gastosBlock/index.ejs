@@ -18,9 +18,11 @@
             <span class="recibo-bar-agua"><%= pagos.pedido %></span>
             <!--<p class="recibo">No.00<%= pagos.recibo %></p>-->
             <p><span class="mes-agua"><%= pagos.fecha.toDateString() %></span>
+            <p><span><%= pagos.empresa %> <%= pagos.telefono %></span></p>
+            <p><%= pagos.direccion %></p>
             <p>Cantidad <%= pagos.cantidad %></p>
             <p><%= pagos.descripcion %></p>
-            <p class="cantidad-agua">Q.<%= pagos.precio %>.00</p>
+            <p class="cantidad-agua">Q.<%= pagos.Precio %></p>
             <p class="cantidad-agua">Q.<%= pagos.total %>.00</p>
             <a href="<%=`/gastosblock/${pagos._id}/edit`  %>"><button class="box-recibo-agua">editar</button></a>
             <a href="<%=`/gastosblock/${pagos._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')"><button class="box-recibo-agua">Eliminar</button></a>

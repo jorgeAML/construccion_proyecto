@@ -29,6 +29,10 @@ module.exports = {
             fecha: req.body.fecha,
             precio: req.body.precio,
             total: req.body.total,
+            empresa: req.body.empresa,
+            direccion: req.body.direccion,
+            telefono: req.body.telefono,
+            centavos: req.body.centavos
         };
         GastosBlock.create(userParams)
             .then(gastosblocks => {
@@ -68,6 +72,10 @@ module.exports = {
             fecha: req.body.fecha,
             precio: req.body.precio,
             total: req.body.total,
+            empresa: req.body.empresa,
+            direccion: req.body.direccion,
+            telefono: req.body.telefono,
+            centavos: req.body.centavos
         };
         GastosBlock.findByIdAndUpdate(pagosId, {
             $set: pagosParams
