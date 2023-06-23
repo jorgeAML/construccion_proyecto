@@ -25,6 +25,7 @@ const gastosController = require('./controllers/gastosGeneralesController');
 const pagosComiteAsovenal = require('./controllers/comitePagosController');
 const PagosAgua2022Asovenal = require("./controllers/comitePagosAgua2022Controller");
 const PagosBlock = require("./controllers/gastosBlockController");
+const PagosFlete = require("./controllers/gastosFleteController");
 //CONTROLLERS
 app.use(methodOverride("_method", {
     methods: ["POST", "GET"]
@@ -82,7 +83,15 @@ router.get('/gastosBlock/:id/edit', PagosBlock.edit);
 router.put('/gastosBlock/:id/update', PagosBlock.update, PagosBlock.redirectView);
 router.delete('/gastosBlock/:id/delete', PagosBlock.delete, PagosBlock.redirectView);
 
-/*PAGOS*/
+/*PAGOS FLETES*/
+router.get('/verComprasFlete', PagosFlete.index, PagosFlete.indexView);
+router.get('/saveGastosFlete', PagosFlete.new);
+router.post('gastosFlete/guardarPago', PagosFlete.create, PagosFlete.redirectView);
+router.get('/gastosFlete/:id/edit', PagosFlete.edit);
+router.put('/gastosFlete/:id/update', PagosFlete.update, PagosFlete.redirectView);
+router.delete('/gastosFlete/:id/delete', PagosFlete.delete, PagosFlete.redirectView);
+
+/*PAGOS HIERRO*/
 
 http.createServer(app).listen(app.get('port'), () => {
     console.log(`Proyecto base de datos gastos esta activo en el puerto http://localhost:${app.get("port")}`);
