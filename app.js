@@ -86,7 +86,7 @@ router.delete('/gastosBlock/:id/delete', PagosBlock.delete, PagosBlock.redirectV
 /*PAGOS FLETES*/
 router.get('/verComprasFlete', PagosFlete.index, PagosFlete.indexView);
 router.get('/saveGastosFlete', PagosFlete.new);
-router.post('gastosFlete/guardarPago', PagosFlete.create, PagosFlete.redirectView);
+router.post('/gastosFlete/guardarPago', PagosFlete.create, PagosFlete.redirectView);
 router.get('/gastosFlete/:id/edit', PagosFlete.edit);
 router.put('/gastosFlete/:id/update', PagosFlete.update, PagosFlete.redirectView);
 router.delete('/gastosFlete/:id/delete', PagosFlete.delete, PagosFlete.redirectView);

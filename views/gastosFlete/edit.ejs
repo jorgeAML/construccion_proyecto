@@ -1,0 +1,38 @@
+<div><%- include('../partials/head') %>
+    <h3>Actualizar datos de pagos de Fletes</h3>
+    <form method="POST" action="<%=`/gastosflete/${gastosfletes._id}/update?_method=PUT`%>">
+        <label for="inputRecibo">Pedido</label>
+        <input type="number" name="pedido" placeholder="No. pedido" value="<%= gastosfletes.pedido %>" id="inputRecibo">
+
+        <label for="inputEmpresa">Nombre de la empresa</label>
+        <input type="text" name="empresa" placeholder="Nombre de la empresa" value="<%= gastosfletes.empresa %>" id="inputEmpresa">
+
+        <label for="inputDireccion">Dirección de la empresa</label>
+        <input type="text" name="direccion" placeholder="Dirección de la empresa" value="<%= gastosfletes.direccion %>" id="inputDireccion">
+
+        <label for="inputTelefono">Telefono</label>
+        <input type="number" name="telefono" placeholder="Telefono empresarial" value="<%= gastosfletes.telefono %>" id="inputTelefono">
+
+        <label for="inputDate">Fecha de pago</label>
+        <input type="date" name="fecha" placeholder="Fecha" value="<%= gastosfletes.fecha %>" id="inputDate">
+        
+        <label for="inputCantidad">Cantidad</label>
+        <input type="number" name="cantidad" placeholder="cantidad" value="<%= gastosfletes.cantidad %>" id="inputCantidad">
+
+        <label for="inputDescripcion">Descripcion</label>
+        <input type="text" name="descripcion" placeholder="Descripcion" value="<%= gastosfletes.descripcion %>" id="inputDescripcion">
+
+        <label for="inputPrecio">Precio</label>
+        <input type="number" name="precio" placeholder="Precio" value="<%= gastosfletes.precio %>" id="inputPrecio">
+
+        <label for="inputCentavos">Centavos</label>
+        <input type="number" name="centavos" placeholder="Centavos" value="<%= gastosfletes.centavos %>" id="inputCentavos">
+
+        <label for="inputTotal">total</label>
+        <input type="number" name="total" placeholder="TOTAL A PAGAR" value="<%= gastosfletes.total %>" id="inputTotal">
+
+        <button class="box" type="submit">Update</button>
+        <button class="box"><a href="/verComprasFletes">Regresar</a></button>
+        <p>Para mandar a llamar la variable correcta usa comiteasovenals que fue la que creaste en el controlador</p>
+    </form>
+</div>
