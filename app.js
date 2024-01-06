@@ -26,6 +26,7 @@ const pagosComiteAsovenal = require('./controllers/comitePagosController');
 const PagosAgua2022Asovenal = require("./controllers/comitePagosAgua2022Controller");
 const PagosBlock = require("./controllers/gastosBlockController");
 const PagosFlete = require("./controllers/gastosFleteController");
+const PagosHierroAcerado = require('./controllers/gastosHierroAceradoController');
 //CONTROLLERS
 app.use(methodOverride("_method", {
     methods: ["POST", "GET"]
@@ -91,7 +92,15 @@ router.get('/gastosFlete/:id/edit', PagosFlete.edit);
 router.put('/gastosFlete/:id/update', PagosFlete.update, PagosFlete.redirectView);
 router.delete('/gastosFlete/:id/delete', PagosFlete.delete, PagosFlete.redirectView);
 
-/*PAGOS HIERRO*/
+/*PAGOS HIERRO ACERADO*/
+router.get('/verComprasHierroAcerado', PagosHierroAcerado.index, PagosHierroAcerado.indexView);
+router.get('/saveGastosHierroAcerado', PagosHierroAcerado.new);
+router.post('/gastosHierroAcerado/guardarPago', PagosHierroAcerado.create, PagosHierroAcerado.redirectView);
+router.get('/gastosHierroAcerado/:id/edit', PagosHierroAcerado.edit);
+router.put('/gastosHierroAcerado/:id/update', PagosHierroAcerado.update, PagosHierroAcerado.redirectView);
+router.delete('/gastosHierroAcerado/:id/delete', PagosHierroAcerado.delete, PagosHierroAcerado.redirectView);
+
+/*PAGOS PRODUCTOS ELECTRICOS*/
 
 http.createServer(app).listen(app.get('port'), () => {
     console.log(`Proyecto base de datos gastos esta activo en el puerto http://localhost:${app.get("port")}`);
