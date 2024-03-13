@@ -1,0 +1,17 @@
+<%- include('../partials/head') %>
+<div>
+    <h3>Ingresar Pago de Cemento</h3>
+    <form action="/gastosCemento/guardarPago" method="POST">
+        <input type="number" name="pedido" placeholder="No. Pedido">
+        <input type="text" name="empresa" placeholder="Empresa o Distribuidora">
+        <input type="text" name="direccion" placeholder="Dirección">
+        <input type="text" name="telefono" placeholder="Telefono">
+        <input type="date" name="fecha" placeholder="Fecha">
+        <input type="number" name="cantidad" placeholder="Cantidad">
+        <input type="text" name="descripcion" placeholder="Descripcion">
+        <input type="number" name="precio" placeholder="Precio">
+        <input type="number" name="centavos" placeholder="Centavos">
+        <input type="number" name="total" placeholder="TOTAL A PAGAR">
+        <button class="box" type="submit">Ingresar datos</button>
+    </form>
+</div>

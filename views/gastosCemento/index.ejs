@@ -2,16 +2,16 @@
 <%- include('../partials/head') %>
 <div>
     <a href="/"><button class="box">Regresar al inicio</button></a>
-    <a href="/saveGastosFlete"><button class="box">Ingresar Pago</button></a>
+    <a href="/saveGastosCemento"><button class="box">Ingresar Pago</button></a>
     <form role="search">
         <input type="search" name="q" placeholder="Buscar recibo" required="" value="">
         <input type="submit" value="Buscar!">
     </form>
 </div>
-<h2 class="center-recibos">Pago de Fletes</h2>
+<h2 class="center-recibos">Pago de Cemento</h2>
 <div id="recibo-asovenal-agua" class="recibo-asovenal row" >
     
-    <% gastosfletes.forEach(pagos => { %>
+    <% gastoscementos.forEach(pagos => { %>
 
     <div class="row">
         <div class="col">
@@ -20,11 +20,11 @@
             <p><span class="block"><%= pagos.fecha.toDateString() %></span>
             <p><span class="monolit"><%= pagos.empresa %>. Tel:502+<%= pagos.telefono %><br> <%= pagos.direccion %></span></p>
             <p>Cantidad <%= pagos.cantidad %></p>
-            <p><%= pagos.descripcion %></p>
+            <p><%= pagos.descripcion %>/cm<sup>2</sup></p>
             <p class="cantidad-block"><%= pagos.Precio %></p>
             <p class="cantidad-block">Q<%= pagos.total %>.00</p>
-            <a href="<%=`/gastosflete/${pagos._id}/edit`  %>"><button class="box-recibo-block">editar</button></a>
-            <a href="<%=`/gastosflete/${pagos._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')"><button class="box-recibo-block">Eliminar</button></a>
+            <a href="<%=`/gastoscemento/${pagos._id}/edit`  %>"><button class="box-recibo-block">editar</button></a>
+            <a href="<%=`/gastoscemento/${pagos._id}/delete?_method=DELETE`%>" onclick="return confirm('Estes seguro de querer borrar este registro?')"><button class="box-recibo-block">Eliminar</button></a>
         </div>
     </div>
     <!--Va el nombre de la carpeta pero en minusculas-->

@@ -27,6 +27,7 @@ const PagosAgua2022Asovenal = require("./controllers/comitePagosAgua2022Controll
 const PagosBlock = require("./controllers/gastosBlockController");
 const PagosFlete = require("./controllers/gastosFleteController");
 const PagosHierroAcerado = require('./controllers/gastosHierroAceradoController');
+const PagosCemento = require('./controllers/gastosCementoController');
 //CONTROLLERS
 app.use(methodOverride("_method", {
     methods: ["POST", "GET"]
@@ -99,6 +100,16 @@ router.post('/gastosHierroAcerado/guardarPago', PagosHierroAcerado.create, Pagos
 router.get('/gastosHierroAcerado/:id/edit', PagosHierroAcerado.edit);
 router.put('/gastosHierroAcerado/:id/update', PagosHierroAcerado.update, PagosHierroAcerado.redirectView);
 router.delete('/gastosHierroAcerado/:id/delete', PagosHierroAcerado.delete, PagosHierroAcerado.redirectView);
+/*PAGOS CEMENTO*/
+router.get('/verComprasCemento', PagosCemento.index, PagosCemento.indexView);
+router.get('/saveGastosCemento', PagosCemento.new);
+router.post('/gastosCemento/guardarPago', PagosCemento.create, PagosCemento.redirectView);
+router.get('/gastosCemento/:id/edit', PagosCemento.edit);
+router.put('/gastosCemento/:id/update', PagosCemento.update, PagosCemento.redirectView);
+router.delete('/gastosCemento/:id/delete', PagosCemento.delete, PagosCemento.redirectView);
+/*PAGOS ARENA Y PIEDRIN*/
+
+/*PAGOS VARILLAS*/
 
 /*PAGOS PRODUCTOS ELECTRICOS*/
 
