@@ -28,6 +28,7 @@ const PagosBlock = require("./controllers/gastosBlockController");
 const PagosFlete = require("./controllers/gastosFleteController");
 const PagosHierroAcerado = require('./controllers/gastosHierroAceradoController');
 const PagosCemento = require('./controllers/gastosCementoController');
+const PagosArenaPiedrin = require('./controllers/gastosArenaPiedrinController');
 //CONTROLLERS
 app.use(methodOverride("_method", {
     methods: ["POST", "GET"]
@@ -108,7 +109,12 @@ router.get('/gastosCemento/:id/edit', PagosCemento.edit);
 router.put('/gastosCemento/:id/update', PagosCemento.update, PagosCemento.redirectView);
 router.delete('/gastosCemento/:id/delete', PagosCemento.delete, PagosCemento.redirectView);
 /*PAGOS ARENA Y PIEDRIN*/
-
+router.get('/verComprasArenaPiedrin', PagosArenaPiedrin.index, PagosArenaPiedrin.indexView);
+router.get('/saveGastosArenaPiedrin', PagosArenaPiedrin.new);
+router.post('/gastosArenaPiedrin/guardarPago', PagosArenaPiedrin.create, PagosArenaPiedrin.redirectView);
+router.get('/gastosArenaPiedrin/:id/edit', PagosArenaPiedrin.edit);
+router.put('/gastosArenaPiedrin/:id/update', PagosArenaPiedrin.update, PagosArenaPiedrin.redirectView);
+router.delete('/gastosArenaPiedrin/:id/delete', PagosArenaPiedrin.delete, PagosArenaPiedrin.redirectView);
 /*PAGOS VARILLAS*/
 
 /*PAGOS PRODUCTOS ELECTRICOS*/
