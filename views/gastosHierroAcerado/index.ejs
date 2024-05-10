@@ -20,7 +20,7 @@
             <p><span class="block"><%= pagos.fecha.toDateString() %></span>
             <p><span class="monolit"><%= pagos.empresa %>. Tel:502+<%= pagos.telefono %><br> <%= pagos.direccion %></span></p>
             <p>Cantidad <%= pagos.cantidad %></p>
-            <p><%= pagos.descripcion %>/cm<sup>2</sup></p>
+            <p><%= pagos.descripcion %></p>
             <p class="cantidad-block"><%= pagos.Precio %></p>
             <p class="cantidad-block">Q<%= pagos.total %>.00</p>
             <a href="<%=`/gastoshierroacerado/${pagos._id}/edit`  %>"><button class="box-recibo-block">editar</button></a>
