@@ -1,0 +1,38 @@
+<div><%- include('../partials/head') %>
+    <h3>Actualizar datos de pagos de Accesorios de plomeria y drenaje</h3>
+    <form method="POST" action="<%=`/gastosplomeriadrenaje/${gastosplomeriadrenajes._id}/update?_method=PUT`%>">
+        <label for="inputRecibo">Pedido</label>
+        <input type="number" name="pedido" placeholder="No. pedido" value="<%= gastosplomeriadrenajes.pedido %>" id="inputRecibo">
+
+        <label for="inputEmpresa">Nombre de la empresa</label>
+        <input type="text" name="empresa" placeholder="Nombre de la empresa" value="<%= gastosplomeriadrenajes.empresa %>" id="inputEmpresa">
+
+        <label for="inputDireccion">Dirección de la empresa</label>
+        <input type="text" name="direccion" placeholder="Dirección de la empresa" value="<%= gastosplomeriadrenajes.direccion %>" id="inputDireccion">
+
+        <label for="inputTelefono">Telefono</label>
+        <input type="number" name="telefono" placeholder="Telefono empresarial" value="<%= gastosplomeriadrenajes.telefono %>" id="inputTelefono">
+
+        <label for="inputDate">Fecha de pago</label>
+        <input type="date" name="fecha" placeholder="Fecha" value="<%= gastosplomeriadrenajes.fecha %>" id="inputDate">
+        
+        <label for="inputCantidad">Cantidad</label>
+        <input type="number" name="cantidad" placeholder="cantidad" value="<%= gastosplomeriadrenajes.cantidad %>" id="inputCantidad">
+
+        <label for="inputDescripcion">Descripcion</label>
+        <input type="text" name="descripcion" placeholder="Descripcion" value="<%= gastosplomeriadrenajes.descripcion %>" id="inputDescripcion">
+
+        <label for="inputPrecio">Precio</label>
+        <input type="number" name="precio" placeholder="Precio" value="<%= gastosplomeriadrenajes.precio %>" id="inputPrecio">
+
+        <label for="inputCentavos">Centavos</label>
+        <input type="number" name="centavos" placeholder="Centavos" value="<%= gastosplomeriadrenajes.centavos %>" id="inputCentavos">
+
+        <label for="inputTotal">total</label>
+        <input type="number" name="total" placeholder="TOTAL A PAGAR" value="<%= gastosplomeriadrenajes.total %>" id="inputTotal">
+
+        <button class="box" type="submit">Update</button>
+        <button class="box"><a href="/verComprasPlomeriaDrenaje">Regresar</a></button>
+        <p>Para mandar a llamar la variable correcta usa ** gastosplomeriadrenajes ** que fue la que creaste en el controlador</p>
+    </form>
+</div>
