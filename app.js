@@ -29,6 +29,7 @@ const PagosFlete = require("./controllers/gastosFleteController");
 const PagosHierroAcerado = require('./controllers/gastosHierroAceradoController');
 const PagosCemento = require('./controllers/gastosCementoController');
 const PagosArenaPiedrin = require('./controllers/gastosArenaPiedrinController');
+const PagosPlomeriaDrenaje = require('./controllers/gastosPlomeriaController');
 //CONTROLLERS
 app.use(methodOverride("_method", {
     methods: ["POST", "GET"]
@@ -115,8 +116,13 @@ router.post('/gastosArenaPiedrin/guardarPago', PagosArenaPiedrin.create, PagosAr
 router.get('/gastosArenaPiedrin/:id/edit', PagosArenaPiedrin.edit);
 router.put('/gastosArenaPiedrin/:id/update', PagosArenaPiedrin.update, PagosArenaPiedrin.redirectView);
 router.delete('/gastosArenaPiedrin/:id/delete', PagosArenaPiedrin.delete, PagosArenaPiedrin.redirectView);
-/*PAGOS VARILLAS*/
-
+/*PAGOS PLOMERIA Y DRENAJE*/
+router.get('/verComprasPlomeriaDrenaje', PagosPlomeriaDrenaje.index, PagosPlomeriaDrenaje.indexView);
+router.get('/saveGastosPlomeriaDrenaje', PagosPlomeriaDrenaje.new);
+router.post('/gastosPlomeriaDrenaje/guardarPago', PagosPlomeriaDrenaje.create, PagosPlomeriaDrenaje.redirectView);
+router.get('/gastosPlomeriaDrenaje/:id/edit', PagosPlomeriaDrenaje.edit);
+router.put('/gastosPlomeriaDrenaje/:id/update', PagosPlomeriaDrenaje.update, PagosPlomeriaDrenaje.redirectView);
+router.delete('/gastosPlomeriaDrenaje/:id/delete', PagosPlomeriaDrenaje.delete, PagosPlomeriaDrenaje.redirectView);
 /*PAGOS PRODUCTOS ELECTRICOS*/
 
 http.createServer(app).listen(app.get('port'), () => {
